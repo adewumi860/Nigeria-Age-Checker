@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inec age checkers</title>
+</head>
+<body style="background: linear-gradient(green,gold);background-repeat: no-repeat;background-size: 100%;height: 100%;">
+    <center style="color: gold;border-radius: 20px;margin-bottom: 30px;">
+        <div style="background-color: rgb(2, 39, 2);width: 500px;margin-top: 50px;height: 400px;">
+            <br>
+            <br>
+        <h1 style="margin-top: 50px;">Nigeria INEC Age Checkers For Voting</h1>
+        <br>
+        <!-- <br> -->
+        <input type="number" style="width: 400px;height: 30px;border-radius: 10px;background-color: gold;padding: 5px; border: 2px solid black;box-shadow: 5px 5px 2px black;" placeholder="Enter Your Age" id="input">
+        <br>
+        <br>
+        <div id="display"></div>
+        <button style="width: 100px;height: 30px;border-radius: 10px;border: 2px solid black;background-color: gold;box-shadow: 5px 5px 2px black;margin-bottom: 20px;" onclick="show()">check</button>
+   </center>
+   <script>
+    function show(){
+        let Age = document.getElementById('input').value
+        let review = document.getElementById('display')
+        if(Age<0 ||Age>120 ||Age ==''){  
+            review.textContent = 'invalid age'
+        } else if(Age>=18){
+            review.textContent =
+            'You  meet the minimum age require,You are eligible to vote'
+        }else if(Age<18){
+            review.textContent = 'You do not meet the minimum age requirement.grow up fast'
+        }
+    }
+   </script>
+   </div>
+</body>
+</html>
